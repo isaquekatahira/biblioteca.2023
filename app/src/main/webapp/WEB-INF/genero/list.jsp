@@ -1,9 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ talib uri="jakarta.tags.cores" prefix="c" %>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Gênero</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" >
 </head>
 <body>
     <div class="container">
@@ -15,13 +18,13 @@
                 <th>Nome</th>
                 <th>&nbsp;</th>
             </tr>
-            <c:forEach var="item" items="$(generos}">
+            <c:forEach var="item" items="${generos}">
                 <tr>
                     <td>${item.id}</td>
                     <td>${item.nome}</td>
                     <td>
-                        <a href="/genero/update?id=5(item.id}" class="btn btn-warning">Editar</a> 
-                        <a href="/genero/delete?id-${item. id}" class="btn btn-danger">Excluin</a>
+                        <a href="/genero/update?id=${item.id}" class="btn btn-warning">Editar</a> 
+                        <a href="/genero/delete?id=${item.id}" class="btn btn-danger">Excluin</a>
                     </td>
                 </tr>
             </c:forEach>
